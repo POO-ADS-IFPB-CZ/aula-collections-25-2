@@ -12,7 +12,12 @@ public class Main {
         Turma turma = new Turma(professor, "POO");
         turma.matricular(new Aluno("222.222.222-02",
                 "Maria", 202412010002l));
+        turma.matricular(new Aluno("222.222.222-02",
+                "Maria", 202412010002l));
         turma.matricular(new Aluno("333.333.333-03",
+                "Pedro", 202412010003l));
+        System.out.println(turma.getAlunos());
+        turma.trancar(new Aluno("333.333.333-03",
                 "Pedro", 202412010003l));
         System.out.println(turma.getAlunos());
     }

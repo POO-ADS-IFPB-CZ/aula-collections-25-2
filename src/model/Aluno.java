@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Aluno {
 
     private String cpf;
@@ -34,6 +36,18 @@ public class Aluno {
 
     public void setMatricula(long matricula) {
         this.matricula = matricula;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Aluno aluno)) return false;
+        return matricula == aluno.matricula && Objects.equals(cpf, aluno.cpf) && Objects.equals(nome, aluno.nome);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cpf, nome, matricula);
     }
 
     @Override
