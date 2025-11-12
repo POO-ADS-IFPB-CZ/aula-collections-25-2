@@ -1,20 +1,19 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        List<String> nomes = new ArrayList<>();
-        nomes.add("João");
-        nomes.add("Maria");
-        nomes.add(0, "Pedro");
-        System.out.println(nomes);
-        nomes.remove("Maria");
-        System.out.println(nomes);
-        System.out.println("Indice de João: "+nomes.indexOf("João"));
-        System.out.println("João existe? "+nomes.contains("João"));
-        System.out.println("Lista inversa: "+nomes.reversed());
+        Stack<Integer> nomes = new Stack<>();
+        nomes.push(1);
+        nomes.push(5);
+        nomes.push(3);
+
+        System.out.println("Topo: "+nomes.peek());
+
+        while(!nomes.isEmpty()){
+            System.out.println(nomes.pop());
+        }
 
 
     }
