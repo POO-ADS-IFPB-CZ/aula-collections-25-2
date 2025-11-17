@@ -2,7 +2,7 @@ package model;
 
 import java.util.Objects;
 
-public class Aluno {
+public class Aluno implements Comparable<Aluno> {
 
     private String cpf;
     private String nome;
@@ -57,5 +57,10 @@ public class Aluno {
                 ", nome='" + nome + '\'' +
                 ", matricula=" + matricula +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Aluno o) {
+        return (int) (matricula - o.matricula);
     }
 }
