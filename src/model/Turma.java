@@ -1,22 +1,21 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Turma {
 
     private Professor professor;
-    private List<Aluno> alunos;
+    private Set<Aluno> alunos;
     private String disciplina;
 
     public Turma(Professor professor, String disciplina) {
         this.professor = professor;
-        alunos = new ArrayList<>();
+        alunos = new HashSet<>();
         this.disciplina = disciplina;
     }
 
     public boolean matricular(Aluno aluno){
-        if(alunos.contains(aluno)) return false;
         return alunos.add(aluno);
     }
 
@@ -32,11 +31,11 @@ public class Turma {
         this.professor = professor;
     }
 
-    public List<Aluno> getAlunos() {
+    public Set<Aluno> getAlunos() {
         return alunos;
     }
 
-    public void setAlunos(List<Aluno> alunos) {
+    public void setAlunos(Set<Aluno> alunos) {
         this.alunos = alunos;
     }
 
