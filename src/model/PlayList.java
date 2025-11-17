@@ -28,8 +28,9 @@ public class PlayList {
     }
 
     public List<Musica> aleatorio(){
-        Collections.shuffle(musicas);
-        return musicas;
+        List<Musica> aleatorio = new ArrayList<>(musicas);
+        Collections.shuffle(aleatorio);
+        return aleatorio;
     }
 
 }
