@@ -16,6 +16,18 @@ public class Main {
                 .toList();
         System.out.println(numeros);
 
+        System.out.println("Crescente: "
+                +numeros.stream().sorted()
+                .collect(Collectors.toUnmodifiableList()));
+        System.out.println("Decrescente: "
+                +numeros.stream().sorted(Comparator.reverseOrder())
+                .collect(Collectors.toUnmodifiableList()));
+        System.out.println("Crescente sem repetir: "
+                +numeros.stream().sorted()
+                .collect(Collectors.toUnmodifiableList()));
+
+
+
     }
 
 }
