@@ -9,13 +9,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Digite uma frase: ");
-        String frase = scanner.nextLine();
-        Arrays.stream(frase.toUpperCase().split(" "))
-                .distinct()
-                .sorted()
-                .forEach(palavra -> System.out.println(palavra));
+        Random random = new Random();
+        List<Integer> numeros = random
+            .ints(30, 0, 100)
+                .boxed()
+                .toList();
+        System.out.println(numeros);
 
     }
 
